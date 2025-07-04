@@ -1,3 +1,6 @@
+from controller.fornecedores import listar_todos_fornecedores
+
+
 def interface():
     op_menu = -1
     while op_menu != 0:
@@ -10,6 +13,7 @@ def menu():
     print("[1] - Listar Tarefas")
     print("[2] - Adicionar Tarefa")
     print("[3] - Remover Tarefa")
+    print("[4] - Listar Todos Fornecedores")
 
 def obter_op_menu():
     while True:
@@ -24,7 +28,7 @@ def validar_op(op):
     if not op:
         raise ValueError("Input em branco. Tente novamente.")
     int_op = int(op)
-    if int_op not in [0,1,2,3]:
+    if int_op not in [0,1,2,3,4]:
         raise ValueError("Opção inválida. Tente novamente.")
 
 def executar_op(op: int):
@@ -34,3 +38,5 @@ def executar_op(op: int):
         print("Adicionar Tarefa")
     elif op == 3:
         print("Remover Tarefa")
+    elif op == 4:
+        listar_todos_fornecedores()

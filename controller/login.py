@@ -1,4 +1,5 @@
 from db.connection_factory import DB
+from model.dao.dao_factory import DaoFactory
 from model.dao.usuario_dao import UsuarioDao
 from controller.interfaceUsuario import interface
 
@@ -6,8 +7,7 @@ def realizar_login():
     if escolher_op() == 0:
         return 0
     else:
-        conn = DB.get_connection()
-        usuario_dao = UsuarioDao(conn)
+        usuario_dao = DaoFactory.create_usuario_dao()
         login = obter_string("\nLOGIN: ")
         usuario = usuario_dao.achar_pelo_login(login)
         if usuario == None:

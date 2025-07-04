@@ -7,8 +7,8 @@ USE agrocruz_db;
 CREATE TABLE tarefas (
 	id INT AUTO_INCREMENT PRIMARY_KEY,
 	tarefa VARCHAR(1000) NOT NULL
-	data
-	feita
+	data DATE NOT NULL
+	realizada ENUM('SIM', 'NAO') NOT NULL
 );
 
 CREATE TABLE usuario (

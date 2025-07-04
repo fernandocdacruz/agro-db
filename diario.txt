@@ -1,0 +1,5 @@
+descrição: sistema para controle das cotações de produtos
+03-07-2025
+--> Começar a interface
+04-07-2025
+--> começando a criar a ligação entre o 
